@@ -1,6 +1,4 @@
-import {api} from "@/shared/api/axiosInstance";
+import { apiGet } from "@/shared/api/request";
+import type { City } from "@/entities/city/model/types";
 
-export const getCities = async () => {
-    const response = await api.get("/cities");
-    return response.data;
-}
+export const getCities = () => apiGet<City[]>("/cities");

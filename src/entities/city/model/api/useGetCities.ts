@@ -5,6 +5,6 @@ export function useGetCities() {
 
     return useQuery({
         queryKey: ["cities"],
-        queryFn: async () => getCities()
+        queryFn: getCities,
     })
 }
