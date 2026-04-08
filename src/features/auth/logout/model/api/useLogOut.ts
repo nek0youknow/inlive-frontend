@@ -7,9 +7,7 @@ export function useLogOut() {
     const { logout } = useAuth();
 
     return useMutation({
-        mutationFn: async () => {
-            logoutApi.logout();
-        },
+        mutationFn: () => logoutApi.logout(),
         onSuccess: async () => {
             await logout();
         },
