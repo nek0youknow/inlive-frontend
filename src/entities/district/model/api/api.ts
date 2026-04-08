@@ -1,12 +1,7 @@
-import {api} from "@/shared/api/axiosInstance";
+import { apiGet } from "@/shared/api/request";
+import type { District } from "@/entities/district/model/types";
 
-export const getDistricts = async () => {
-    const response = await api.get("/districts");
-    return response.data;
-}
+export const getDistricts = () => apiGet<District[]>("/districts");
 
-export const getDistrictByCityId = async (cityId: number) => {
-    const response = await api.get(`/districts/by-city/${cityId}`);
-
-    return response.data;
-}
+export const getDistrictByCityId = (cityId: number) =>
+    apiGet<District[]>(`/districts/by-city/${cityId}`);
