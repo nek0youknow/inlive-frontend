@@ -8,8 +8,8 @@ import {formatErrorForToast} from "@/shared/lib/error/formatError";
 export function useManagerRegister() {
     return useMutation({
         mutationFn: (data: RegisterCredentials) => managerRegisterApi.register(data),
-        onSuccess: (response) => {
-            localStorage.setItem("accessToken", response?.data?.accessToken);
+        onSuccess: (data) => {
+            localStorage.setItem("accessToken", data?.accessToken);
 
             toast.success("Успешный вход в систему.", {
                 position: "top-right",

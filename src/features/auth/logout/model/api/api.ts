@@ -1,7 +1,7 @@
-import {api} from "@/shared/api/axiosInstance";
+import { apiPost } from "@/shared/api/request";
 
 export const logoutApi = {
     logout: () => {
-        api.post("/auth/logout")
+        return apiPost<void, void>("/auth/logout");
     }
-}
+};

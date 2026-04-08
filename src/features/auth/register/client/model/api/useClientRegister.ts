@@ -9,8 +9,8 @@ import {formatErrorForToast} from "@/shared/lib/error/formatError";
 export function useClientRegister() {
     return useMutation({
         mutationFn: (data: ClientRegisterCredentials) => createClient(data),
-        onSuccess: (response) => {
-            localStorage.setItem("accessToken", response?.data?.accessToken);
+        onSuccess: (data) => {
+            localStorage.setItem("accessToken", data?.accessToken);
             toast.success("Успешный вход в систему.", {
                 position: "top-right",
                 richColors: true,

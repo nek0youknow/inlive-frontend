@@ -1,8 +1,9 @@
-import {api} from "@/shared/api/axiosInstance";
-import {ClientRegisterCredentials} from "@/features/auth/register/client/model/types";
+import type { ClientRegisterCredentials } from "@/features/auth/register/client/model/types";
+import { apiPost } from "@/shared/api/request";
 
-export const createClient = async (data: ClientRegisterCredentials) => {
-    const response = await api.post("/auth/client/register", data);
+type RegisterResponse = {
+    accessToken: string;
+};
 
-    return response.data;
-}
+export const createClient = (data: ClientRegisterCredentials) =>
+    apiPost<RegisterResponse, ClientRegisterCredentials>("/auth/client/register", data);
