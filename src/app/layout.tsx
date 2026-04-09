@@ -1,10 +1,11 @@
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import {Toaster} from "sonner";
 import {QueryProvider} from "@/app/providers/query-provider";
 
-const inter = Inter({ subsets: ['latin', 'cyrillic'] })
+const inter = Inter({ subsets: ['latin', 'cyrillic'], variable: '--font-inter' })
+const jetBrainsMono = JetBrains_Mono({ subsets: ['latin', 'cyrillic'], variable: '--font-jetbrains-mono' })
 
 export const viewport: Viewport = {
     colorScheme: 'light',
@@ -99,7 +100,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="ru" suppressHydrationWarning>
-            <body className={inter.className}>
+            <body className={`${inter.className} ${inter.variable} ${jetBrainsMono.variable}`}>
                 <QueryProvider>
                     {children}
                     <Toaster />
