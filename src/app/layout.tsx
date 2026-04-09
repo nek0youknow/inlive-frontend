@@ -100,7 +100,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="ru" suppressHydrationWarning>
-            <body className={`${inter.className} ${inter.variable} ${jetBrainsMono.variable}`}>
+            <body className={`${jetBrainsMono.className} ${inter.variable} ${jetBrainsMono.variable}`}>
                 <QueryProvider>
                     {children}
                     <Toaster />
