@@ -2,7 +2,8 @@ import axios, { AxiosError, AxiosRequestConfig } from "axios";
 import {normalizeImageUrl} from "@/shared/lib/normalizeImageUrl";
 import {Accommodation} from "@/entities/accommodation/model/types";
 
-const API_URL = "/api";
+const backendBase = process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "");
+const API_URL = backendBase ? `${backendBase}/api` : "/api";
 
 export const api = axios.create({
     baseURL: API_URL,
