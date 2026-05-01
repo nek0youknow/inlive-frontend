@@ -9,6 +9,7 @@ export function useHandleLogout() {
     const handleLogout = async () => {
         try {
             await logOut.mutateAsync();
+            document.cookie = `USER_ROLE=; path=/; samesite=lax; max-age=0${window.location.protocol === "https:" ? "; secure" : ""}`;
             window.location.href = "/";
         } catch (error) {
             const formattedError = formatErrorForToast(error);
