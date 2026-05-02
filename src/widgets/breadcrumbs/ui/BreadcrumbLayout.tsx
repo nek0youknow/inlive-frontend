@@ -8,8 +8,8 @@ import {
 } from "@/shared/ui/breadcrumb";
 import Link from "next/link";
 import React from "react";
-import {BreadcrumbItemData} from "@/entities/breadcrumbs/model/types";
-import {SidebarTrigger} from "@/shared/ui/sidebar";
+import { BreadcrumbItemData } from "@/entities/breadcrumbs/model/types";
+import { SidebarTrigger } from "@/shared/ui/sidebar";
 
 interface BreadcrumbsProps {
     items: BreadcrumbItemData[];
@@ -27,10 +27,17 @@ export function BreadcrumbLayout({ items }: BreadcrumbsProps) {
                         <React.Fragment key={item.href || item.label}>
                             <BreadcrumbItem>
                                 {isLastItem || !item.href ? (
-                                    <BreadcrumbPage className="text-sm sm:text-base">{item.label}</BreadcrumbPage>
+                                    <BreadcrumbPage className="text-sm sm:text-base">
+                                        {item.label}
+                                    </BreadcrumbPage>
                                 ) : (
                                     <BreadcrumbLink asChild>
-                                        <Link href={item.href} className="text-sm sm:text-base">{item.label}</Link>
+                                        <Link
+                                            href={item.href}
+                                            className="text-sm sm:text-base"
+                                        >
+                                            {item.label}
+                                        </Link>
                                     </BreadcrumbLink>
                                 )}
                             </BreadcrumbItem>

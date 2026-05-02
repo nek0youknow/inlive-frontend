@@ -11,8 +11,8 @@ interface PriceInputProps {
 export function PriceInput({form}:PriceInputProps) {
     return (
         <div className="flex flex-col gap-3 flex-1">
-            <Label htmlFor="price" className="flex gap-2 items-center text-gray-700 font-medium">
-                <DollarSignIcon width={18} height={18} className="text-green-600" />
+            <Label htmlFor="price" className="flex gap-2 items-center text-muted-foreground font-medium">
+                <DollarSignIcon width={18} height={18} className="text-rose-400" />
                 Цена
             </Label>
             <Input

@@ -28,7 +28,7 @@ export function RequestItemLink({requestId, children}: RequestItemLinkProps) {
             <div className="relative">
                 {children}
                 {isNavigating && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-white/80 rounded-xl z-10">
+                    <div className="absolute inset-0 flex items-center justify-center bg-card/80 rounded-xl z-10">
                         <div className="w-6 h-6 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
                     </div>
                 )}

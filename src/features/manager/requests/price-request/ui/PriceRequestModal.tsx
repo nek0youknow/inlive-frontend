@@ -32,12 +32,12 @@ export function PriceRequestModal({requestId}: PriceRequestModalProps) {
                 </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[600px] gap-0 p-0 border-0 rounded-2xl shadow-xl">
-                <div className="bg-gradient-to-r from-primary/10 to-primary/5 px-6 pt-6 pb-4 border-b border-gray-200 rounded-t-2xl">
-                    <DialogTitle className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                <div className="bg-gradient-to-r from-primary/10 to-primary/5 px-6 pt-6 pb-4 border-b border-border rounded-t-2xl">
+                    <DialogTitle className="text-xl font-bold text-foreground flex items-center gap-2">
                         <CheckCircle2 className="w-5 h-5 text-primary" />
                         Ценовое предложение
                     </DialogTitle>
-                    <p className="text-sm text-gray-600 mt-1">Статус и детали вашего предложения</p>
+                    <p className="text-sm text-muted-foreground mt-1">Статус и детали вашего предложения</p>
                 </div>
 
                 <div className="px-6 py-6 flex flex-col gap-6">
@@ -55,7 +55,7 @@ export function PriceRequestModal({requestId}: PriceRequestModalProps) {
                         </>
                     )}
 
-                    <div className="flex flex-col gap-2 pt-4 border-t border-gray-200">
+                    <div className="flex flex-col gap-2 pt-4 border-t border-border">
                         {
                             data?.content[0]?.clientResponseStatus === "REJECTED" && (
                                 <UpdatePriceModal parentModal={setIsOpen} id={data?.content[0]?.id} curPrice={data?.content[0].price} />

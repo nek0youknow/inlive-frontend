@@ -20,11 +20,11 @@ export function DistrictMultiSelect({ form }: DistrictMultiSelectProps) {
     if (!selectedCityId) {
         return (
             <div className="flex flex-col gap-3 opacity-50">
-                <Label className="flex gap-2 items-center text-gray-700 font-medium">
-                    <MapPin width={18} height={18} className="text-green-600" />
+                <Label className="flex gap-2 items-center text-muted-foreground font-medium">
+                    <MapPin width={18} height={18} className="text-rose-400" />
                     Районы
                 </Label>
-                <div className="text-sm text-gray-500 px-4 py-2 bg-gray-50 rounded-lg border border-gray-200">
+                <div className="text-sm text-muted-foreground px-4 py-2 bg-muted rounded-lg border border-border">
                     Сначала выберите город
                 </div>
             </div>
@@ -35,11 +35,11 @@ export function DistrictMultiSelect({ form }: DistrictMultiSelectProps) {
     if (isLoading) {
         return (
             <div className="flex flex-col gap-3">
-                <Label className="flex gap-2 items-center text-gray-700 font-medium">
-                    <MapPin width={18} height={18} className="text-green-600" />
+                <Label className="flex gap-2 items-center text-muted-foreground font-medium">
+                    <MapPin width={18} height={18} className="text-rose-400" />
                     Районы
                 </Label>
-                <div className="text-sm text-gray-500 px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 animate-pulse">
+                <div className="text-sm text-muted-foreground px-4 py-2 bg-muted rounded-lg border border-border animate-pulse">
                     Загрузка районов...
                 </div>
             </div>
@@ -50,11 +50,11 @@ export function DistrictMultiSelect({ form }: DistrictMultiSelectProps) {
     if (!districts || districts.length === 0) {
         return (
             <div className="flex flex-col gap-3">
-                <Label className="flex gap-2 items-center text-gray-700 font-medium">
-                    <MapPin width={18} height={18} className="text-green-600" />
+                <Label className="flex gap-2 items-center text-muted-foreground font-medium">
+                    <MapPin width={18} height={18} className="text-rose-400" />
                     Районы
                 </Label>
-                <div className="text-sm text-gray-500 px-4 py-2 bg-gray-50 rounded-lg border border-gray-200">
+                <div className="text-sm text-muted-foreground px-4 py-2 bg-muted rounded-lg border border-border">
                     Районы не найдены
                 </div>
             </div>
@@ -63,8 +63,8 @@ export function DistrictMultiSelect({ form }: DistrictMultiSelectProps) {
 
     return (
         <div className="flex flex-col gap-3">
-            <Label className="flex gap-2 items-center text-gray-700 font-medium">
-                <MapPin width={18} height={18} className="text-green-600" />
+            <Label className="flex gap-2 items-center text-muted-foreground font-medium">
+                <MapPin width={18} height={18} className="text-rose-400" />
                 Районы
             </Label>
 
@@ -93,7 +93,7 @@ export function DistrictMultiSelect({ form }: DistrictMultiSelectProps) {
                     return (
                         <div className="border rounded-lg p-4">
                             {/* Кнопка "Выбрать все" */}
-                            <div className="flex items-center gap-3 pb-3 mb-3 border-b border-gray-200">
+                            <div className="flex items-center gap-3 pb-3 mb-3 border-b border-border">
                                 <Checkbox
                                     id="select-all-districts"
                                     checked={selectedIds.length === districts.length && districts.length > 0}
@@ -102,7 +102,7 @@ export function DistrictMultiSelect({ form }: DistrictMultiSelectProps) {
                                 />
                                 <label
                                     htmlFor="select-all-districts"
-                                    className="text-sm font-medium text-gray-700 cursor-pointer"
+                                    className="text-sm font-medium text-muted-foreground cursor-pointer"
                                 >
                                     Выбрать все ({districts.length})
                                 </label>
@@ -113,7 +113,7 @@ export function DistrictMultiSelect({ form }: DistrictMultiSelectProps) {
                                     {districts.map((district: District) => (
                                         <label
                                             key={district.id}
-                                            className="flex items-center justify-between gap-3 p-2 rounded-md hover:bg-white cursor-pointer transition-colors"
+                                            className="flex items-center justify-between gap-3 p-2 rounded-md hover:bg-muted cursor-pointer transition-colors"
                                         >
                                             <div className="flex items-center gap-2">
                                                 <Checkbox
@@ -122,12 +122,12 @@ export function DistrictMultiSelect({ form }: DistrictMultiSelectProps) {
                                                     onCheckedChange={() => handleToggle(district.id)}
                                                     className="w-4 h-4"
                                                 />
-                                                <span className="text-sm text-gray-700">
+                                                <span className="text-sm text-muted-foreground">
                                                     {district.name}
                                                 </span>
                                             </div>
                                             {district.averagePrice !== null && district.averagePrice !== undefined && (
-                                                <div className="text-xs text-gray-500">
+                                                <div className="text-xs text-muted-foreground">
                                                     Средняя цена: {Number(district.averagePrice).toLocaleString("ru-RU")} тг
                                                 </div>
                                             )}
@@ -137,8 +137,8 @@ export function DistrictMultiSelect({ form }: DistrictMultiSelectProps) {
                             </ScrollArea>
 
                             {selectedIds.length > 0 && (
-                                <div className="mt-3 pt-3 border-t border-gray-200">
-                  <span className="text-xs text-gray-600">
+                                <div className="mt-3 pt-3 border-t border-border">
+                  <span className="text-xs text-muted-foreground">
                     Выбрано: {selectedIds.length} из {districts.length}
                   </span>
                                 </div>

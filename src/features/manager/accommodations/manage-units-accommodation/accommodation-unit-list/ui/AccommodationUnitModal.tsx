@@ -64,7 +64,7 @@ export function AccommodationUnitModal({id, isModalOpen, setIsModalOpen}:Accommo
                         </InfoItem>
 
                         <InfoItem icon={Tag} label="Описание">
-                            <p className="text-sm sm:text-base text-gray-700 leading-relaxed break-words">
+                            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed break-words">
                                 {data?.description}
                             </p>
                         </InfoItem>
@@ -85,7 +85,7 @@ export function AccommodationUnitModal({id, isModalOpen, setIsModalOpen}:Accommo
                             <Badge
                                 className={
                                     data?.isAvailable
-                                        ? "bg-green-50 text-green-700 text-xs sm:text-sm"
+                                        ? "bg-rose-950/40 text-rose-300 text-xs sm:text-sm"
                                         : "bg-red-100 border-red-400 text-red-700 text-xs sm:text-sm"
                                 }
                             >
@@ -121,22 +121,22 @@ export function AccommodationUnitModal({id, isModalOpen, setIsModalOpen}:Accommo
                             {data?.tariffs && data.tariffs.length > 0 ? (
                                 <div className="space-y-2 sm:space-y-3">
                                     {data.tariffs.map((tariff: Tariff) => (
-                                        <div key={tariff.id} className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2 p-2 sm:p-3 bg-gray-50 rounded-lg">
+                                        <div key={tariff.id} className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2 p-2 sm:p-3 bg-muted rounded-lg">
                                             <div className="flex flex-col gap-1">
                                                 <span className="font-medium text-sm sm:text-base">{tariff.rangeTypeValue}</span>
-                                                <span className="text-xs sm:text-sm text-gray-500">{tariff.rangeTypeKey}</span>
+                                                <span className="text-xs sm:text-sm text-muted-foreground">{tariff.rangeTypeKey}</span>
                                             </div>
                                             <div className="flex items-center gap-1 sm:gap-2">
                                                 <span className="text-sm sm:text-base font-semibold">
                                                     {tariff.price.toLocaleString('ru-RU', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                                                 </span>
-                                                <span className="text-xs sm:text-sm text-gray-600">{tariff.currency}</span>
+                                                <span className="text-xs sm:text-sm text-muted-foreground">{tariff.currency}</span>
                                             </div>
                                         </div>
                                     ))}
                                 </div>
                             ) : (
-                                <p className="text-sm sm:text-base text-gray-500">Тарифы не установлены</p>
+                                <p className="text-sm sm:text-base text-muted-foreground">Тарифы не установлены</p>
                             )}
                         </InfoItem>
                     </div>

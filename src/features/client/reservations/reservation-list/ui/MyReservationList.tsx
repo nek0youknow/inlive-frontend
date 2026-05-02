@@ -60,16 +60,16 @@ export function MyReservationList() {
     return (
         <div className="space-y-4">
             <div className="flex items-center justify-end mb-6">
-                <span className="text-sm text-gray-600">
+                <span className="text-sm text-muted-foreground">
                     {totalCount} бронирований
                 </span>
             </div>
 
             <div className="grid gap-4">
                 {allReservations.length === 0 ? (
-                    <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
-                        <Building2 className="w-12 h-12 text-gray-400 mx-auto mb-3" />
-                        <p className="text-gray-600">У вас нет бронирований</p>
+                    <div className="text-center py-12 bg-card rounded-xl border border-border">
+                        <Building2 className="w-12 h-12 text-muted-foreground mx-auto mb-3" />
+                        <p className="text-muted-foreground">У вас нет бронирований</p>
                     </div>
                 ) : (
                     allReservations.map((reservation: Reservation) => (

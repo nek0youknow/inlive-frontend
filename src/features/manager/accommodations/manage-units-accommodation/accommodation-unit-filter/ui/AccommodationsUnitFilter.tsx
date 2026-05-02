@@ -70,7 +70,7 @@
                         <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
                             <label className="font-medium text-sm sm:text-base">Статус</label>
                             <Select onValueChange={(value) => debouncedSearch({ isAvailable: value })}>
-                                <SelectTrigger id="status-select" className="bg-white w-full sm:w-[180px]">
+                                <SelectTrigger id="status-select" className="bg-card w-full sm:w-[180px]">
                                     <SelectValue placeholder="Статус" />
                                 </SelectTrigger>
                                 <SelectContent>

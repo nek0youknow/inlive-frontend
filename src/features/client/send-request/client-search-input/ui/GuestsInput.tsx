@@ -11,8 +11,8 @@ interface GuestsInputProps {
 export function GuestsInput({form}:GuestsInputProps) {
     return (
         <div className="flex flex-col gap-3 flex-1">
-            <Label htmlFor="countOfPeople" className="flex gap-2 items-center text-gray-700 font-medium">
-                <User width={18} height={18} className="text-green-600" />
+            <Label htmlFor="countOfPeople" className="flex gap-2 items-center text-muted-foreground font-medium">
+                <User width={18} height={18} className="text-rose-400" />
                 Кол-во гостей
             </Label>
             <Input

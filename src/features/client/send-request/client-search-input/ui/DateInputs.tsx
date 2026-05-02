@@ -76,8 +76,8 @@ export function DateInputs({ value, onChange, error, oneNight = false }: DateInp
 
     return (
         <div className="flex w-full flex-col gap-3">
-            <Label htmlFor="date" className="flex gap-2 items-center text-gray-700 font-medium">
-                <CalendarIcon width={18} height={18} className="text-green-600" />
+            <Label htmlFor="date" className="flex gap-2 items-center text-muted-foreground font-medium">
+                <CalendarIcon width={18} height={18} className="text-rose-400" />
                 Дата
             </Label>
             <Popover  open={open} onOpenChange={setOpen}>

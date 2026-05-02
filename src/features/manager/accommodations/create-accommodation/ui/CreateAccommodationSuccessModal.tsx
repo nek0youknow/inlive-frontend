@@ -24,8 +24,8 @@ export function CreateAccommodationSuccessModal({
             <DialogContent className="sm:max-w-md">
                 <DialogHeader>
                     <div className="flex items-center justify-center mb-4">
-                        <div className="rounded-full bg-green-100 p-3">
-                            <CheckCircle2 className="h-8 w-8 text-green-600" />
+                        <div className="rounded-full bg-rose-900/50 p-3">
+                            <CheckCircle2 className="h-8 w-8 text-rose-400" />
                         </div>
                     </div>
                     <DialogTitle className="text-center text-xl sm:text-2xl">

@@ -47,7 +47,7 @@ export function AccommodationModal({openModal, setOpenModal, id} : Props) {
                         </InfoItem>
 
                         <InfoItem icon={FileText} label="Описание">
-                            <p className="text-base text-gray-700 leading-relaxed">
+                            <p className="text-base text-muted-foreground leading-relaxed">
                                 {data?.description}
                             </p>
                         </InfoItem>

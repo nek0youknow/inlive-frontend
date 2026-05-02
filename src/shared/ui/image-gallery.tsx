@@ -64,7 +64,7 @@ export function ImageGallery({ images }: ImageGalleryProps) {
                 <button
                     key={i}
                     onClick={() => openLightbox(i)}
-                    className="flex-shrink-0 w-48 h-36 sm:w-56 sm:h-40 md:w-64 md:h-48 rounded-lg overflow-hidden bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="flex-shrink-0 w-48 h-36 sm:w-56 sm:h-40 md:w-64 md:h-48 rounded-lg overflow-hidden bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <img
                       src={url}

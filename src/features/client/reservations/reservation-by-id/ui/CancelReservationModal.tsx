@@ -30,7 +30,7 @@ export function CancelReservationModal({id}: CancelReservationModalProps) {
             <DialogContent>
                 <DialogTitle>Отмена бронирования</DialogTitle>
                 <div className="flex flex-col gap-6 mt-4">
-                    <div className="flex flex-row gap-3 items-center text-gray-700">
+                    <div className="flex flex-row gap-3 items-center text-muted-foreground">
                         <TriangleAlert className="w-5 h-5 text-orange-500 flex-shrink-0" />
                         <p className="text-base">
                             Вы уверены, что хотите отменить бронирование?

@@ -31,11 +31,11 @@ export function RequestStatus({status}: PriceRequestStatusProps) {
             );
         case PriceRequestClientStatus.ACCEPTED:
             return (
-                <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-xl">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                <div className="flex items-center gap-3 p-4 bg-rose-950/40 border border-rose-800/50 rounded-xl">
+                    <CheckCircle2 className="w-5 h-5 text-rose-400 flex-shrink-0" />
                     <div>
-                        <p className="text-sm font-semibold text-green-900">Принято</p>
-                        <p className="text-xs text-green-700">Ваше предложение одобрено клиентом</p>
+                        <p className="text-sm font-semibold text-rose-100">Принято</p>
+                        <p className="text-xs text-rose-300">Ваше предложение одобрено клиентом</p>
                     </div>
                 </div>
             );

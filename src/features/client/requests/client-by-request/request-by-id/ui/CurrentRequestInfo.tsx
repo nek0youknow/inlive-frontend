@@ -38,7 +38,7 @@ export function CurrentRequestInfo({requestId}:CurrentRequestInfoProps) {
                 </div>
                 <div className={"text-right space-y-2 max-md:space-y-1"}>
                     <p className={"font-medium opacity-60 max-md:text-sm"}>Бюджет</p>
-                    <p className={"text-2xl sm:text-3xl font-bold text-green-600"}>{data?.price.toLocaleString("ru-RU")} Тг</p>
+                    <p className={"text-2xl sm:text-3xl font-bold text-rose-400"}>{data?.price.toLocaleString("ru-RU")} Тг</p>
                 </div>
             </div>
             <div className={"flex flex-col lg:flex-row lg:justify-between gap-4 sm:gap-5 w-full"}>
@@ -50,20 +50,20 @@ export function CurrentRequestInfo({requestId}:CurrentRequestInfoProps) {
                     }
 
                     <RequestStatusCheck currentStatus={data?.status} />
-                    <div className={"bg-white border rounded-lg flex flex-col gap-6 sm:gap-8 md:gap-10 py-4 sm:py-5 md:py-6 px-4 sm:px-5 md:px-6"}>
+                    <div className={"bg-card border rounded-lg flex flex-col gap-6 sm:gap-8 md:gap-10 py-4 sm:py-5 md:py-6 px-4 sm:px-5 md:px-6"}>
                         <div className={"flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-2"}>
                             <LabelTextInfo
-                                icon={<CalendarIcon width={18} height={18} className={"sm:w-5 sm:h-5 text-green-500"} />}
+                                icon={<CalendarIcon width={18} height={18} className={"sm:w-5 sm:h-5 text-rose-400"} />}
                                 label={"Заезд"}
                                 value={formatDate(data?.checkInDate.split('T')[0])}
                             />
                             <LabelTextInfo
-                                icon={<CalendarIcon width={18} height={18} className={"sm:w-5 sm:h-5 text-green-500"} />}
+                                icon={<CalendarIcon width={18} height={18} className={"sm:w-5 sm:h-5 text-rose-400"} />}
                                 label={"Выезд"}
                                 value={formatDate(data?.checkOutDate.split('T')[0])}
                             />
                             <LabelTextInfo
-                                icon={<UsersIcon width={18} height={18} className={"sm:w-5 sm:h-5 text-green-500"} />}
+                                icon={<UsersIcon width={18} height={18} className={"sm:w-5 sm:h-5 text-rose-400"} />}
                                 label={"Гости"}
                                 value={data?.countOfPeople}
                             />
@@ -83,7 +83,7 @@ export function CurrentRequestInfo({requestId}:CurrentRequestInfoProps) {
                         <TagList
                             title="Типы размещения:"
                             items={data?.unitTypes}
-                            color="green"
+                            color="rose"
                         />
 
                         <TagList
@@ -100,8 +100,8 @@ export function CurrentRequestInfo({requestId}:CurrentRequestInfoProps) {
                     </div>
                 </div>
                 {data?.status === "OPEN_TO_PRICE_REQUEST" && (
-                    <div className={"bg-white border flex flex-col my-6 sm:my-8 md:my-10 gap-4 sm:gap-5 w-full lg:w-1/2 h-fit rounded-lg p-4 sm:p-5 md:p-6"}>
-                        <LabelTextInfo icon={<EditIcon width={18} height={18} className={"sm:w-5 sm:h-5 text-green-500"} />} label={"Действия"} />
+                    <div className={"bg-card border flex flex-col my-6 sm:my-8 md:my-10 gap-4 sm:gap-5 w-full lg:w-1/2 h-fit rounded-lg p-4 sm:p-5 md:p-6"}>
+                        <LabelTextInfo icon={<EditIcon width={18} height={18} className={"sm:w-5 sm:h-5 text-rose-400"} />} label={"Действия"} />
                         <div className={"flex flex-col w-full gap-3"}>
                             <ClientSearchRequestPriceModal id={requestId} />
                             <RemoveSearchRequestModal id={requestId} />

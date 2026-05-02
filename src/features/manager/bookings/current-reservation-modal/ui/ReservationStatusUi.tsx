@@ -20,21 +20,21 @@ export function ReservationStatusUi({status}: ReservationStatusUiProps) {
             )
         case ReservationStatus.APPROVED:
             return (
-                <div className="flex items-center gap-3 p-4 bg-blue-50 border border-blue-200 rounded-xl">
-                    <InfoIcon className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                <div className="flex items-center gap-3 p-4 bg-rose-950/40 border border-rose-800/50 rounded-xl">
+                    <InfoIcon className="w-5 h-5 text-rose-400 flex-shrink-0" />
                     <div>
-                        <p className="text-sm font-semibold text-blue-900">Подтверждено</p>
-                        <p className="text-xs text-blue-700">Менеджер подтвердил бронирование и ожидает приезд клиента</p>
+                        <p className="text-sm font-semibold text-rose-100">Подтверждено</p>
+                        <p className="text-xs text-rose-300">Менеджер подтвердил бронирование и ожидает приезд клиента</p>
                     </div>
                 </div>
             );
         case ReservationStatus.FINISHED_SUCCESSFUL:
             return (
-                <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-xl">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                <div className="flex items-center gap-3 p-4 bg-rose-950/40 border border-rose-800/50 rounded-xl">
+                    <CheckCircle2 className="w-5 h-5 text-rose-400 flex-shrink-0" />
                     <div>
-                        <p className="text-sm font-semibold text-green-900">Успешно</p>
-                        <p className="text-xs text-green-700">Клиент пришел и бронирование было завершено</p>
+                        <p className="text-sm font-semibold text-rose-100">Успешно</p>
+                        <p className="text-xs text-rose-300">Клиент пришел и бронирование было завершено</p>
                     </div>
                 </div>
             )

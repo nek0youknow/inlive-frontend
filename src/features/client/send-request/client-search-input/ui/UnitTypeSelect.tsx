@@ -11,7 +11,7 @@ interface UnitTypeSelectProps {
 export function UnitTypeSelect({form}:UnitTypeSelectProps) {
     return (
         <div className="flex flex-col gap-3">
-            <Label className="text-gray-700 font-medium">Тип размещения</Label>
+            <Label className="text-muted-foreground font-medium">Тип размещения</Label>
             <Controller
                 name="unitType"
                 control={form.control}

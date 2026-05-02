@@ -4,9 +4,9 @@ import { useLogin } from "@/features/auth/login/model/api/useLogin";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { getCurrentTime } from "@/shared/lib/date/getCurrentTime";
-import {sessionService} from "@/entities/session/model/sessionService";
-import {LoginCredentials} from "@/features/auth/login/model/types";
-import {formatErrorForToast} from "@/shared/lib/error/formatError";
+import { sessionService } from "@/entities/session/model/sessionService";
+import { LoginCredentials } from "@/features/auth/login/model/types";
+import { formatErrorForToast } from "@/shared/lib/error/formatError";
 
 export function useHandleLogin() {
     const login = useLogin();
@@ -16,7 +16,7 @@ export function useHandleLogin() {
         try {
             await login.mutateAsync(data);
 
-            toast.success("Успешный вход в систему.", {
+            toast.success("Signed in successfully.", {
                 position: "top-right",
                 richColors: true,
                 description: getCurrentTime(),
@@ -29,7 +29,7 @@ export function useHandleLogin() {
                 router.push("/manager");
             } else if (user?.role.includes("ADMIN")) {
                 router.push("/admin");
-            }else if (user?.role.includes("CLIENT")) {
+            } else if (user?.role.includes("CLIENT")) {
                 router.push("/client");
             } else {
                 router.push("/");
@@ -39,7 +39,9 @@ export function useHandleLogin() {
             toast.error(formattedError.message, {
                 position: "top-right",
                 richColors: true,
-                description: formattedError.description || "Проверьте данные и попробуйте снова",
+                description:
+                    formattedError.description ||
+                    "Check your details and try again",
             });
         }
     };

@@ -65,7 +65,7 @@ export function ImageUploader({
                     className={`
                         relative border-2 border-dashed rounded-lg p-8 text-center
                         transition-colors cursor-pointer hover:border-primary/50
-                        ${error ? "border-red-500 hover:border-red-500/50" : "border-gray-300"}
+                        ${error ? "border-red-500 hover:border-red-500/50" : "border-border"}
                     `}
                 >
                     <Input
@@ -81,7 +81,7 @@ export function ImageUploader({
                             {images.map((preview, index) => (
                                 <div
                                     key={index}
-                                    className="relative group aspect-square rounded-lg overflow-hidden border border-gray-200"
+                                    className="relative group aspect-square rounded-lg overflow-hidden border border-border"
                                 >
                                     <img
                                         src={preview}
@@ -112,14 +112,14 @@ export function ImageUploader({
                         </div>
                     ) : (
                         <div className="flex flex-col items-center gap-2 pointer-events-none">
-                            <Upload className="w-10 h-10 text-gray-400" />
-                            <div className="text-sm text-gray-600">
+                            <Upload className="w-10 h-10 text-muted-foreground" />
+                            <div className="text-sm text-muted-foreground">
                             <span className="font-semibold text-primary">
                                 Нажмите для выбора
                             </span>{" "}
                                 или перетащите файлы сюда
                             </div>
-                            <p className="text-xs text-gray-500">
+                            <p className="text-xs text-muted-foreground">
                                 PNG, JPG, WEBP до 5MB (максимум {maxImages} изображений)
                             </p>
                         </div>
@@ -132,7 +132,7 @@ export function ImageUploader({
 
                 {/* Images counter */}
                 {images.length > 0 && (
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-muted-foreground">
                         Загружено: {images.length} из {maxImages}
                     </p>
                 )}

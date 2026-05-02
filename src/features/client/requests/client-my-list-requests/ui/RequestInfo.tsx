@@ -11,28 +11,28 @@ interface RequestInfoProps {
 export function RequestInfo({request}:RequestInfoProps) {
 
     return (
-        <article className="bg-white border rounded-xl shadow-md p-4 sm:p-6 md:p-10 hover:shadow-lg transition-shadow">
+        <article className="bg-card border rounded-xl shadow-md p-4 sm:p-6 md:p-10 hover:shadow-lg transition-shadow">
             <header className="flex flex-col sm:flex-row sm:justify-between sm:flex-wrap gap-4 sm:gap-6">
                 <LabelTextInfo
-                    icon={<CalendarIcon width={18} height={18} className="sm:w-5 sm:h-5 text-green-500" />}
+                    icon={<CalendarIcon width={18} height={18} className="sm:w-5 sm:h-5 text-rose-400" />}
                     label="Дата заезда"
                     value={formatDate(request.checkInDate.split('T')[0])}
                 />
 
                 <LabelTextInfo
-                    icon={<CalendarIcon width={18} height={18} className="sm:w-5 sm:h-5 text-green-500" />}
+                    icon={<CalendarIcon width={18} height={18} className="sm:w-5 sm:h-5 text-rose-400" />}
                     label="Дата выезда"
                     value={formatDate(request.checkOutDate.split('T')[0])}
                 />
 
                 <LabelTextInfo
-                    icon={<Users width={18} height={18} className="sm:w-5 sm:h-5 text-green-500" />}
+                    icon={<Users width={18} height={18} className="sm:w-5 sm:h-5 text-rose-400" />}
                     label="Гости"
                     value={request.countOfPeople}
                 />
 
                 <LabelTextInfo
-                    icon={<DollarSignIcon width={18} height={18} className="sm:w-5 sm:h-5 text-green-500" />}
+                    icon={<DollarSignIcon width={18} height={18} className="sm:w-5 sm:h-5 text-rose-400" />}
                     label="Бюджет"
                     value={`${request.price.toLocaleString("ru-RU")} Тг`}
                 />
@@ -58,7 +58,7 @@ export function RequestInfo({request}:RequestInfoProps) {
                 <TagList
                     title="Типы размещения:"
                     items={request.unitTypes}
-                    color="green"
+                    color="rose"
                 />
 
                 <TagList

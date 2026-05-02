@@ -31,9 +31,9 @@ export function RequestStatusCheck({ currentStatus }: RequestStatusCheckProps) {
     };
 
     return (
-        <div className={"bg-white border w-full rounded-lg p-6"}>
+        <div className={"bg-card border border-border w-full rounded-lg p-6"}>
             <LabelTextInfo
-                icon={<ChartBar className={"text-green-500"} width={20} height={20} />}
+                icon={<ChartBar className={"text-rose-400"} width={20} height={20} />}
                 label={"Статус"}
             />
             <div className={"flex gap-2 my-10 flex-col"}>
@@ -47,9 +47,9 @@ export function RequestStatusCheck({ currentStatus }: RequestStatusCheckProps) {
                                 <div
                                     className={`
                                         rounded-full relative h-10 w-10 flex-shrink-0 flex items-center justify-center
-                                        ${status === "completed" ? "bg-green-500" : ""}
-                                        ${status === "active" ? "bg-blue-500 ring-2 ring-blue-200" : ""}
-                                        ${status === "disabled" ? "bg-gray-300" : ""}
+                                        ${status === "completed" ? "bg-rose-600" : ""}
+                                        ${status === "active" ? "bg-primary ring-2 ring-primary/50" : ""}
+                                        ${status === "disabled" ? "bg-muted" : ""}
                                         ${status === "disabled" ? "opacity-50" : ""}
                                     `}
                                 >
@@ -60,7 +60,7 @@ export function RequestStatusCheck({ currentStatus }: RequestStatusCheckProps) {
                                             className={`
                                                 font-bold
                                                 ${status === "active" ? "text-white" : ""}
-                                                ${status === "disabled" ? "text-gray-500" : ""}
+                                                ${status === "disabled" ? "text-muted-foreground" : ""}
                                             `}
                                         >
                                             {index + 1}
@@ -70,8 +70,8 @@ export function RequestStatusCheck({ currentStatus }: RequestStatusCheckProps) {
                                 <p
                                     className={`
                                         text-lg font-medium
-                                        ${status === "active" ? "text-blue-600" : ""}
-                                        ${status === "disabled" ? "text-gray-500" : ""}
+                                        ${status === "active" ? "text-primary" : ""}
+                                        ${status === "disabled" ? "text-muted-foreground" : ""}
                                     `}
                                 >
                                     {step.label}
@@ -82,7 +82,7 @@ export function RequestStatusCheck({ currentStatus }: RequestStatusCheckProps) {
                             {index < STEPS.length - 1 && (
                                 <div className={"flex items-center gap-3"}>
                                     <div className={"w-10 flex justify-center"}>
-                                        <div className={"w-0.5 h-6 bg-gray-300"}></div>
+                                        <div className={"w-0.5 h-6 bg-muted"}></div>
                                     </div>
                                 </div>
                             )}

@@ -38,7 +38,7 @@ export function RangeFilter({
                 type="number"
                 value={value[0]}
                 onChange={handleMinChange}
-                className="bg-white w-30 text-center"
+                className="bg-card w-30 text-center"
             />
 
             <Slider
@@ -54,7 +54,7 @@ export function RangeFilter({
                 type="number"
                 value={value[1]}
                 onChange={handleMaxChange}
-                className="bg-white w-30 text-center"
+                className="bg-card w-30 text-center"
             />
         </div>
     );
