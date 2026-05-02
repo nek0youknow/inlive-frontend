@@ -83,7 +83,7 @@ export function CreatePriceRequestFormFields({
                     id={"units"}
                     role={"group"}
                     aria-label={"Выбор юнитов"}
-                    className={"border border-gray-200 overflow-y-auto flex flex-col gap-3 rounded-lg py-3 px-3 bg-gray-50 w-full max-h-64"}
+                    className={"border border-border overflow-y-auto flex flex-col gap-3 rounded-lg py-3 px-3 bg-muted w-full max-h-64"}
                 >
                     {units?.length > 0 ? (
                         units?.map((unit:AccommodationUnit) => (
@@ -108,7 +108,7 @@ export function CreatePriceRequestFormFields({
                             </button>
                         ))
                     ) : (
-                        <p className={"text-gray-500 text-sm text-center py-8"}>Нет доступных юнитов</p>
+                        <p className={"text-muted-foreground text-sm text-center py-8"}>Нет доступных юнитов</p>
                     )}
                 </div>
                 {form.formState.errors.unitId && (

@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/shared/ui/input";
 import { Label } from "@/shared/ui/label";
 import { Button } from "@/shared/ui/button";
-import {useHandleLogin} from "@/features/auth/login/model/useHandleLogin";
+import { useHandleLogin } from "@/features/auth/login/model/useHandleLogin";
 
 export function LoginForm() {
     const { handleLogin, login } = useHandleLogin();
@@ -26,10 +26,16 @@ export function LoginForm() {
                     type="email"
                     placeholder="Email"
                     {...form.register("email")}
-                    className={form.formState.errors.email ? "border-red-500 focus-visible:ring-red-500/30" : ""}
+                    className={
+                        form.formState.errors.email
+                            ? "border-red-500 focus-visible:ring-red-500/30"
+                            : ""
+                    }
                 />
                 {form.formState.errors.email && (
-                    <p className="text-sm text-red-500">{form.formState.errors.email.message as string}</p>
+                    <p className="text-sm text-red-500">
+                        {form.formState.errors.email.message as string}
+                    </p>
                 )}
             </fieldset>
 
@@ -39,16 +45,22 @@ export function LoginForm() {
                     type="password"
                     placeholder="Password"
                     {...form.register("password")}
-                    className={form.formState.errors.password ? "border-red-500 focus-visible:ring-red-500/30" : ""}
+                    className={
+                        form.formState.errors.password
+                            ? "border-red-500 focus-visible:ring-red-500/30"
+                            : ""
+                    }
                 />
                 {form.formState.errors.password && (
-                    <p className="text-sm text-red-500">{form.formState.errors.password.message as string}</p>
+                    <p className="text-sm text-red-500">
+                        {form.formState.errors.password.message as string}
+                    </p>
                 )}
             </fieldset>
 
             <fieldset className="self-center mt-5">
                 <Button className="w-30" disabled={login.isPending}>
-                    {login.isPending ? "Входим..." : "Войти"}
+                    {login.isPending ? "Signing in..." : "Sign in"}
                 </Button>
             </fieldset>
         </form>

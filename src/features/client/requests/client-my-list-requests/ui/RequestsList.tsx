@@ -59,7 +59,7 @@ export function RequestsList() {
     if (allRequests.length === 0) {
         return (
             <div className="text-center py-10">
-                <p className="text-gray-600">У вас пока нет запросов</p>
+                <p className="text-muted-foreground">У вас пока нет запросов</p>
             </div>
         );
     }

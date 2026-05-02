@@ -11,7 +11,7 @@ interface RatingRangeInputProps {
 export function RatingRangeInput({ form }: RatingRangeInputProps) {
     return (
         <div className="flex flex-col gap-3">
-            <Label className="flex gap-2 items-center text-gray-700 font-medium">
+            <Label className="flex gap-2 items-center text-muted-foreground font-medium">
                 <Star width={18} height={18} className="text-yellow-500" />
                 Рейтинг (от - до)
             </Label>
@@ -34,7 +34,7 @@ export function RatingRangeInput({ form }: RatingRangeInputProps) {
                         </div>
                     )}
                 />
-                <span className="text-gray-500">—</span>
+                <span className="text-muted-foreground">—</span>
                 <Controller
                     name="toRating"
                     control={form.control}

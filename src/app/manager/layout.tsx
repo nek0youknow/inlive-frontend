@@ -1,44 +1,35 @@
-import type { Metadata } from 'next'
-import {ManagerSidebar} from "@/widgets/sidebar/ui/ManagerSidebar";
-import {SidebarProvider} from "@/shared/ui/sidebar";
+import type { Metadata } from "next";
+import { ManagerSidebar } from "@/widgets/sidebar/ui/ManagerSidebar";
+import { SidebarProvider } from "@/shared/ui/sidebar";
 
 export const metadata: Metadata = {
-    title: 'Менеджер - Управление недвижимостью',
-    description: 'Панель управления для менеджеров недвижимости. Управляйте объектами, обрабатывайте заявки, настраивайте тарифы и доступность.',
-    keywords: [
-        'менеджер недвижимости',
-        'управление объектами',
-        'заявки',
-        'тарифы',
-        'недвижимость',
-        'менеджер'
-    ],
+    title: "Manager — property management",
+    description: "Dashboard for property managers.",
+    keywords: ["manager", "property", "UI Tap"],
     robots: {
         index: false,
         follow: true,
     },
     openGraph: {
-        title: 'Менеджер - Управление недвижимостью | UI Tap',
-        description: 'Панель управления для менеджеров недвижимости',
-        url: '/manager',
-        type: 'website',
+        title: "Manager — property management | UI Tap",
+        description: "Dashboard for property managers",
+        url: "/manager",
+        type: "website",
     },
     alternates: {
-        canonical: '/manager',
+        canonical: "/manager",
     },
-}
+};
 
 export default function ManagerLayout({
     children,
 }: {
-    children: React.ReactNode
+    children: React.ReactNode;
 }) {
     return (
         <SidebarProvider>
             <ManagerSidebar />
-            <main className={"p-4 w-full"}>
-                {children}
-            </main>
+            <main className={"p-4 w-full"}>{children}</main>
         </SidebarProvider>
-    )
+    );
 }

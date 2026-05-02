@@ -24,14 +24,14 @@ export function PriceRequestList({requestId}: PriceRequestListProps) {
     };
 
     return (
-        <div className={"bg-white p-6 border rounded-lg flex flex-col gap-4"}>
+        <div className={"bg-card p-6 border rounded-lg flex flex-col gap-4"}>
             <LabelTextInfo
-                icon={<MessageSquareReply width={20} height={20} className={"text-green-500"} />}
+                icon={<MessageSquareReply width={20} height={20} className={"text-rose-400"} />}
                 label={"Входящие ответы"}
             />
             <div className={"space-y-3"}>
                 {data?.content?.length === 0 ? (
-                    <div className={"text-center py-8 text-gray-500"}>
+                    <div className={"text-center py-8 text-muted-foreground"}>
                         <p>Нет входящих ответов</p>
                     </div>
                 ) : (

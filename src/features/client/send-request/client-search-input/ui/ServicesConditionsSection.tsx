@@ -12,8 +12,8 @@ export function ServicesConditionsSection({form}:ServicesConditionsSectionProps)
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-3">
-                <Label className="flex gap-2 items-center text-gray-700 font-medium">
-                    <Check width={18} height={18} className="text-green-600" />
+                <Label className="flex gap-2 items-center text-muted-foreground font-medium">
+                    <Check width={18} height={18} className="text-rose-400" />
                     Услуги
                 </Label>
                 <Controller
@@ -31,8 +31,8 @@ export function ServicesConditionsSection({form}:ServicesConditionsSectionProps)
             </div>
 
             <div className="flex flex-col gap-3">
-                <Label className="flex gap-2 items-center text-gray-700 font-medium">
-                    <Check width={18} height={18} className="text-green-600" />
+                <Label className="flex gap-2 items-center text-muted-foreground font-medium">
+                    <Check width={18} height={18} className="text-rose-400" />
                     Условия
                 </Label>
                 <Controller

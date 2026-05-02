@@ -29,7 +29,7 @@ export function ManagerAccommodationFilterPanel({hasAddButton} : ManagerAccommod
             <form role="search" className="flex-1 w-full sm:max-w-md">
                 <fieldset
                     className="relative">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground w-4 h-4 pointer-events-none" />
                     <Input
                         id="accommondation-search"
                         placeholder="Искать объект"

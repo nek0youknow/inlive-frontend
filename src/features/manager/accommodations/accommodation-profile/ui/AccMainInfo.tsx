@@ -29,7 +29,7 @@ export function AccMainInfo({name, description, address, cityName, districtName,
                     </Button>
                 )}
             </div>
-            <div className={"bg-gray-100 flex px-4 sm:px-6 md:px-7 py-4 sm:py-5 flex-col gap-4 sm:gap-5 rounded-2xl sm:rounded-3xl border w-full h-fit"}>
+            <div className={"bg-muted flex px-4 sm:px-6 md:px-7 py-4 sm:py-5 flex-col gap-4 sm:gap-5 rounded-2xl sm:rounded-3xl border w-full h-fit"}>
                 <DataField
                     icon={Captions}
                     label="Название"

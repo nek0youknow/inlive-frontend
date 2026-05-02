@@ -29,7 +29,7 @@ export function PriceResponseItem({
             <article
                 className={`group border-2 rounded-xl p-4 transition-all duration-300 ${
                     finalStatus === "ACCEPTED"
-                        ? "border-green-200 bg-green-50/30"
+                        ? "border-rose-800/50 bg-rose-950/30"
                         : "border-red-200 bg-red-50/30"
                 }`}
             >
@@ -40,10 +40,10 @@ export function PriceResponseItem({
 
                     <div className={"flex-1 min-w-0"}>
                         <div className={"flex items-baseline gap-2 mb-1"}>
-                            <h4 className={"font-semibold text-gray-900 truncate"}>
+                            <h4 className={"font-semibold text-foreground truncate"}>
                                 {response.accommodationName}
                             </h4>
-                            <span className={"text-sm text-gray-600 whitespace-nowrap"}>
+                            <span className={"text-sm text-muted-foreground whitespace-nowrap"}>
                                 {response.accommodationUnitName}
                             </span>
                         </div>
@@ -53,14 +53,14 @@ export function PriceResponseItem({
                                 <span className={"text-xl font-bold text-primary"}>
                                     {response.price.toLocaleString()}
                                 </span>
-                                <span className={"text-sm text-gray-600"}>тг</span>
+                                <span className={"text-sm text-muted-foreground"}>тг</span>
                             </div>
 
-                            <div className={"h-4 w-px bg-gray-200"}></div>
+                            <div className={"h-4 w-px bg-border"}></div>
 
                             <Badge className={
                                 finalStatus === "ACCEPTED"
-                                    ? "bg-green-100 text-green-700 hover:bg-green-100"
+                                    ? "bg-rose-900/50 text-rose-300 hover:bg-rose-900/50"
                                     : "bg-red-100 text-red-700 hover:bg-red-100"
                             }>
                                 {finalStatus === "ACCEPTED" ? "✓ Принято" : "✗ Отклонено"}
@@ -75,7 +75,7 @@ export function PriceResponseItem({
     const getStatusBadge = (status: string) => {
         switch (status) {
             case "ACCEPTED":
-                return <Badge className={"bg-green-100 text-green-700 hover:bg-green-100"}>Принято</Badge>;
+                return <Badge className={"bg-rose-900/50 text-rose-300 hover:bg-rose-900/50"}>Принято</Badge>;
             case "REJECTED":
                 return <Badge variant={"destructive"} className={"hover:bg-red-600"}>Отклонено</Badge>;
             case "WAITING":
@@ -86,7 +86,7 @@ export function PriceResponseItem({
     };
 
     return (
-        <article className={`group border-2 rounded-xl p-4 transition-all duration-300 border-gray-200 hover:border-primary/30 bg-white hover:shadow-md`}>
+        <article className={`group border-2 rounded-xl p-4 transition-all duration-300 border-border hover:border-primary/30 bg-card hover:shadow-md`}>
             <div className={"flex items-start gap-3"}>
                 <div className={"flex-shrink-0 p-2.5 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg group-hover:from-primary/20 group-hover:to-primary/10 transition-colors"}>
                     <Building2 width={18} height={18} className={"text-primary"} />
@@ -94,10 +94,10 @@ export function PriceResponseItem({
 
                 <div className={"flex-1 min-w-0"}>
                     <div className={"flex items-baseline gap-2 mb-1"}>
-                        <h4 className={"font-semibold text-gray-900 truncate"}>
+                        <h4 className={"font-semibold text-foreground truncate"}>
                             {response.accommodationName}
                         </h4>
-                        <span className={"text-sm text-gray-600 whitespace-nowrap"}>
+                        <span className={"text-sm text-muted-foreground whitespace-nowrap"}>
                             {response.accommodationUnitName}
                         </span>
                     </div>
@@ -107,10 +107,10 @@ export function PriceResponseItem({
                             <span className={"text-xl font-bold text-primary"}>
                                 {response.price.toLocaleString()}
                             </span>
-                            <span className={"text-sm text-gray-600"}>тг</span>
+                            <span className={"text-sm text-muted-foreground"}>тг</span>
                         </div>
 
-                        <div className={"h-4 w-px bg-gray-200"}></div>
+                        <div className={"h-4 w-px bg-border"}></div>
 
                         {getStatusBadge(response.clientResponseStatus)}
                     </div>

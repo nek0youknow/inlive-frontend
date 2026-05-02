@@ -29,7 +29,7 @@ export function RemoveCondition({ conditionId }: RemoveCondtionProps) {
             <DialogContent className="sm:max-w-md">
                 <DialogTitle />
                 <div className={"flex flex-col gap-10 mt-5 "}>
-                    <div className="flex flex-row gap-2 items-center text-gray-500">
+                    <div className="flex flex-row gap-2 items-center text-muted-foreground">
                         <TriangleAlert />
 
                         <p >

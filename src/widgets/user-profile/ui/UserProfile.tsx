@@ -13,13 +13,13 @@ import {Dialog, DialogContent, DialogTitle} from "@/shared/ui/dialog";
 
 function ProfileCard({icon: Icon, label, value}: {icon: React.ElementType; label: string; value: string}) {
     return (
-        <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 md:p-5 bg-white rounded-lg sm:rounded-xl border border-gray-200 hover:shadow-md transition-shadow">
-            <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-100 flex items-center justify-center">
-                <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" />
+        <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 md:p-5 bg-card rounded-lg sm:rounded-xl border border-border hover:shadow-md transition-shadow">
+            <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-rose-900/50 flex items-center justify-center">
+                <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-rose-400" />
             </div>
             <div className="flex-1 min-w-0">
-                <p className="text-xs sm:text-sm text-gray-500 mb-1">{label}</p>
-                <p className="text-sm sm:text-base font-medium text-gray-900 break-words">{value}</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mb-1">{label}</p>
+                <p className="text-sm sm:text-base font-medium text-foreground break-words">{value}</p>
             </div>
         </div>
     );
@@ -82,7 +82,7 @@ export function UserProfile() {
 
     return (
         <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-6 my-10">
-            <div className="bg-white rounded-xl  sm:rounded-2xl md:rounded-3xl shadow-lg border border-gray-300 overflow-hidden mb-4 sm:mb-6 md:mb-8">
+            <div className="bg-card rounded-xl  sm:rounded-2xl md:rounded-3xl shadow-lg border border-border overflow-hidden mb-4 sm:mb-6 md:mb-8">
                 <div className="bg-primary px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10 text-center relative">
                     <div className="flex justify-center mb-3 sm:mb-4 relative">
                         <button
@@ -97,7 +97,7 @@ export function UserProfile() {
                             aria-label="Открыть фото профиля"
                         >
                             <Avatar className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 border-2 sm:border-4 border-white shadow-lg transition-transform group-hover:scale-105 group-disabled:cursor-default">
-                                <AvatarFallback className="bg-white text-green-600 text-2xl sm:text-3xl md:text-4xl font-bold">
+                                <AvatarFallback className="bg-card text-rose-400 text-2xl sm:text-3xl md:text-4xl font-bold">
                                     {getInitials(data.firstName, data.lastName)}
                                 </AvatarFallback>
                                 {data?.photoUrl && (
@@ -118,14 +118,14 @@ export function UserProfile() {
                             type="button"
                             variant="secondary"
                             size="icon"
-                            className="absolute bottom-0 right-0 sm:right-0 rounded-full bg-white hover:bg-gray-100 shadow-lg z-10 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10"
+                            className="absolute bottom-0 right-0 sm:right-0 rounded-full bg-card hover:bg-muted shadow-lg z-10 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10"
                             onClick={(e) => {
                                 e.stopPropagation();
                                 setIsPhotoModalOpen(true);
                             }}
                             aria-label="Изменить фото"
                         >
-                            <Camera className="w-3 h-3 sm:w-4 sm:h-4 text-gray-700" />
+                            <Camera className="w-3 h-3 sm:w-4 sm:h-4 text-muted-foreground" />
                         </Button>
                     </div>
                     <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2 break-words px-2">
@@ -135,7 +135,7 @@ export function UserProfile() {
 
                 <div className="p-4 sm:p-6 md:p-8 space-y-3 sm:space-y-4 md:space-y-5">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0 mb-3 sm:mb-4">
-                        <h3 className="text-base sm:text-lg font-semibold text-gray-600">Личная информация</h3>
+                        <h3 className="text-base sm:text-lg font-semibold text-muted-foreground">Личная информация</h3>
                         <Button
                             type="button"
                             variant="outline"

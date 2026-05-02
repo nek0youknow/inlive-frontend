@@ -9,7 +9,7 @@ interface OneNightCheckboxProps {
 
 export function OneNightCheckbox({ form }: OneNightCheckboxProps) {
     return (
-        <label className="flex items-center gap-3 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-200 hover:border-green-400 hover:shadow-md cursor-pointer transition-all duration-200">
+        <label className="flex items-center gap-3 p-4 bg-gradient-to-r from-rose-950/50 to-rose-900/40 rounded-lg border border-rose-800/50 hover:border-rose-500 hover:shadow-md cursor-pointer transition-all duration-200">
             <Controller
                 name="oneNight"
                 control={form.control}
@@ -29,8 +29,8 @@ export function OneNightCheckbox({ form }: OneNightCheckboxProps) {
                 )}
             />
             <div className="flex items-center gap-2">
-                <Moon width={18} height={18} className="text-green-600" />
-                <span className="text-sm font-medium text-gray-700">Только на одну ночь</span>
+                <Moon width={18} height={18} className="text-rose-400" />
+                <span className="text-sm font-medium text-muted-foreground">Только на одну ночь</span>
             </div>
         </label>
     )

@@ -55,7 +55,7 @@ export function AccommodationUnitList({accommodationId}:AccommodationUnitListPro
               <TableCell>{item.floor}</TableCell>
               <TableCell>
                 {item.isAvailable ? (
-                  <Badge className="bg-green-50 text-green-700">Доступно</Badge>
+                  <Badge className="bg-rose-950/40 text-rose-300">Доступно</Badge>
                 ) : (
                   <Badge variant="destructive">Занято</Badge>
                 )}

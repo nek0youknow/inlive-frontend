@@ -16,7 +16,7 @@ export function ConditionChange({conditionId}: ConditionChangeProps) {
     return (
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
-                <SquarePen className={"w-4 text-blue-500"} />
+                <SquarePen className={"w-4 text-rose-400"} />
             </DialogTrigger>
             <DialogContent className="sm:max-w-md">
                 <DialogTitle>Изменить Условие</DialogTitle>
