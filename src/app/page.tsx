@@ -14,7 +14,7 @@ export default function LandingPage() {
         const structuredData = {
             "@context": "https://schema.org",
             "@type": "WebSite",
-            name: "UI Tap",
+            name: "Inlive",
             description:
                 "A platform to find and manage housing in Kazakhstan",
             url: baseUrl,
@@ -28,7 +28,7 @@ export default function LandingPage() {
             },
             publisher: {
                 "@type": "Organization",
-                name: "UI Tap",
+                name: "Inlive",
                 url: baseUrl,
             },
         };
@@ -60,7 +60,7 @@ export default function LandingPage() {
                             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground">
                                 Welcome to
                                 <span className="block text-rose-400 mt-2">
-                                    UI Tap
+                                    Inlive
                                 </span>
                             </h1>
                             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto px-2">
